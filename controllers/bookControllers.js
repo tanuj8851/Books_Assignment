@@ -70,7 +70,7 @@ const updateBooks = async (req, res) => {
 
     await book.save();
 
-    res.status(200).json(book);
+    res.status(200).json({msg:"Book Updated Successfully",book});
   } catch (error) {
     res.status(500).json({ message: "Server error" });
   }
@@ -78,16 +78,15 @@ const updateBooks = async (req, res) => {
 
 const deleteBooks = async (req, res) => {
   try {
-    const book = await Book.findById(req.params.id);
+    const book = await Book.findByIdAndDelete(req.params.id);
+  
     if (!book) {
       return res.status(404).json({ message: "Book not found" });
     }
 
-    await book.remove();
-
     res.status(200).json({ message: "Book removed" });
   } catch (error) {
-    res.status(500).json({ message: "Server error" });
+    res.status(500).json({ message: "Server error",err:error.message });
   }
 };
 

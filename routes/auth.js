@@ -1,7 +1,7 @@
 const express = require("express");
 const {register,Login,protectedRoute}= require("../controllers/authControllers")
 
-const { protect } = require("../middleware/auth");
+const { protect, authorize } = require("../middleware/auth");
 const router = express.Router();
 
 // console.log(register,Login,protectedRoute);
@@ -108,6 +108,6 @@ router.post("/login",Login);
  *       401:
  *         description: Unauthorized
  */
-router.get('/me', protect,protectedRoute);
+router.get('/me', protect,authorize("Admin"),protectedRoute);
 
 module.exports = router;

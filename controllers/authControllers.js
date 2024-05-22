@@ -10,7 +10,7 @@ const register = async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     const user = new User({ name, email, password: hashedPassword, role });
-    console.log(user);
+    
     await user.save();
 
     res.status(201).json({ success: true, msg: "User Created Successfully" });
@@ -57,7 +57,7 @@ const Login = async (req, res) => {
 };
 
 const protectedRoute = async (req, res) => {
-  const user = await User.findById(req.user.id);
+  const user = await User.find();
 
   res.status(200).json({
     success: true,
