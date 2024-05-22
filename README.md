@@ -44,7 +44,7 @@ Book Managment is an application to manage books and users. This document provid
 **Book Management** aims to streamline the process of managing users and books, offering a secure and efficient solution for libraries, book clubs, and personal collections.
 
 ## Swagger URL
-Access the API documentation here: [Swagger UI](http://localhost:3000/api-docs/#/)
+Access the API documentation here: [Swagger UI](http://books-assignment.onrender.com/api-docs/#/)
 
 ## User Endpoints
 
@@ -56,14 +56,13 @@ Access the API documentation here: [Swagger UI](http://localhost:3000/api-docs/#
     "name": "test4",
     "email": "test4@gmail.com",
     "password": "test4"
-    // Role will be 'Reader' by default
   }
   ```
 - **Role Options**: `Admin`, `Author`, `Reader`
 - **Response**:
   ```json
   {
-    Success: true,
+    "Success": true,
     "msg": "User Created Successfully"
   }
   ```
@@ -179,7 +178,7 @@ Access the API documentation here: [Swagger UI](http://localhost:3000/api-docs/#
   ```json
   {
     "title": "Book5",
-        "author": "New Auth", //Update the author 
+        "author": "New Auth",
         "coverPage": "https://res.cloudinary.com/dxip6sh0z/image/upload/v1716354431/book_covers/node.jpg",
         "year": 2024
     }
