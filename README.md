@@ -2,6 +2,8 @@
 
 The project builds RESTful APIs using Node.js, Express and Mongoose, jsonwebtoken, bcryptjs, dotenv, express-validator, multer, cloudinary, swagger-jsdoc, swagger-ui-express.
 
+
+
 ## Manual Installation
 
 Clone the repo:
@@ -23,6 +25,10 @@ Set the environment variables:
 # open .env and modify the environment variables
 ```
 
+**Book Management** aims to streamline the process of managing users and books, offering a secure and efficient solution for libraries, book clubs, and personal collections.
+
+## Swagger URL
+Access the API documentation here: [Swagger UI](http://books-assignment.onrender.com/api-docs/#/)
 
 
 ## Table of Contents
@@ -30,6 +36,7 @@ Set the environment variables:
 - [Commands](#commands)
 - [Environment Variables](#environment-variables)
 - [Project Structure](#project-structure)
+- [How to User](#How-to-use)
 - [API Endpoints](#api-endpoints)
 
 ## Commands
@@ -84,6 +91,11 @@ BOOKS_ASSIGNMENT\
  |--.gitignore      # ignoring node_modules and .env file 
  |--app.js        # App entry point
 ```
+
+### How to Use
+1. **Swagger Documentation**: Access the API documentation at [Swagger UI](http:/books-assignment.onrender.com/api-docs/#/).
+2. **User Registration and Login**: Use the provided endpoints to register a new user and log in to receive a token.
+3. **Manage Books**: Add, view, search,Update and delete books using the respective endpoints.
 
 ### API Endpoints
 
