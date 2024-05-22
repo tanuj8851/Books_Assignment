@@ -62,14 +62,13 @@ Access the API documentation here: [Swagger UI](http://localhost:3000/api-docs/#
 - **Role Options**: `Admin`, `Author`, `Reader`
 - **Response**:
   ```json
- {
-    "success": true,
+  {
+    Success: true,
     "msg": "User Created Successfully"
-}
+  }
   ```
-  - The token will also be saved into Redis. If not provided in the header, it will search Redis for the token.
 
-### Log in an Existing User
+  ### Log in an Existing User
 - **Endpoint**: `POST /api/auth/login`
 - **Request Schema**:
   ```json
@@ -80,25 +79,18 @@ Access the API documentation here: [Swagger UI](http://localhost:3000/api-docs/#
   ```
 - **Response**:
   ```json
- {
-    "success": true,
+  {
+       "success": true,
     "msg": "User Login SuccessFully",
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NGQ3OTA1MzFlNTQ4NDFlOGMyYWVhNiIsInJvbGUiOiJSZWFkZXIiLCJpYXQiOjE3MTYzNTMzOTUsImV4cCI6MTcxNjQzOTc5NX0.5cgnIwgVghZb6i8Oo-2SVSsC02f-vnchePFHkJGwuto"
-}
+  }
   ```
 
 ### Get All Users (Admin Only)
 - **Endpoint**: `GET /api/auth/me`
 - **Unauthorized Response**:
-  ```json
- {
-    "success": false,
-    "message": "User role Reader is not authorized to access this route"
-}
-  ```
-- **Authorized Response**:
-  ```json
- {
+ ```json
+   {
     "success": true,
     "data": [
         {
@@ -144,6 +136,14 @@ Access the API documentation here: [Swagger UI](http://localhost:3000/api-docs/#
     ]
 }
   ```
+- **Authorized Response**:
+  ```json
+  {
+    "success": false,
+    "message": "User role Reader is not authorized to access this route"
+
+  }
+  ```
 
 
 ## Book Endpoints
@@ -171,7 +171,7 @@ Access the API documentation here: [Swagger UI](http://localhost:3000/api-docs/#
         "_id": "664d7d80fd15c38d60effa42",
         "__v": 0
     }
-}
+
   ```
 ### Update a Existing Book (Admin/Author Only)
 - **Endpoint**: `PUT /api/books/:id`
@@ -182,12 +182,13 @@ Access the API documentation here: [Swagger UI](http://localhost:3000/api-docs/#
         "author": "New Auth", //Update the author 
         "coverPage": "https://res.cloudinary.com/dxip6sh0z/image/upload/v1716354431/book_covers/node.jpg",
         "year": 2024
-}
+    }
+
   ```
 - **Response**:
-  ```json
- {
-    "msg": "Book Updated Successfully",
+   ```json
+  {
+   "msg": "Book Updated Successfully",
     "book": {
         "_id": "664d7d80fd15c38d60effa42",
         "title": "Book5",
@@ -196,15 +197,16 @@ Access the API documentation here: [Swagger UI](http://localhost:3000/api-docs/#
         "year": 2024,
         "__v": 0
     }
-}
+    }
+
   ```
 
 ### Get All Books
 - **Endpoint**: `GET /api/books/`
 - **Response**:
-  ```json
- [
-    {
+   ```json
+  [
+  {
         "_id": "651d8a1334dd33d42cd85fcf",
         "title": "Water",
         "author": "C",
@@ -237,7 +239,9 @@ Access the API documentation here: [Swagger UI](http://localhost:3000/api-docs/#
         "year": 2024,
         "__v": 0
     }
-]
+
+    ]
+
   ```
 
 ### Get
