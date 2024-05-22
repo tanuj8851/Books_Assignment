@@ -38,8 +38,8 @@ Access the API documentation here: [Swagger UI](http://books-assignment.onrender
 - [Commands](#commands)
 - [Environment Variables](#environment-variables)
 - [Project Structure](#project-structure)
-- [How to User](#How-to-use)
 - [API Endpoints](#api-endpoints)
+- [How to Use](#How-to-use)
 
 ## Commands
 
@@ -94,10 +94,7 @@ BOOKS_ASSIGNMENT\
  |--app.js        # App entry point
 ```
 
-### How to Use
-1. **Swagger Documentation**: Access the API documentation at [Swagger UI](http:/books-assignment.onrender.com/api-docs/#/).
-2. **User Registration and Login**: Use the provided endpoints to register a new user and log in to receive a token.
-3. **Manage Books**: Add, view, search,Update and delete books using the respective endpoints.
+
 
 ### API Endpoints
 
@@ -114,6 +111,12 @@ List of available routes:
 `GET api/books/:id` - Get book by id\
 `PUT api/books/:Id` - Update books\
 `DELETE api/books/:id` - Delete book 
+
+
+### How to Use
+1. **Swagger Documentation**: Access the API documentation at [Swagger UI](http:/books-assignment.onrender.com/api-docs/#/).
+2. **User Registration and Login**: Use the provided endpoints to register a new user and log in to receive a token.
+3. **Manage Books**: Add, view, search,Update and delete books using the respective endpoints.
 
 
 
