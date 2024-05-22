@@ -89,7 +89,7 @@ router.post("/login",Login);
  * @swagger
  * /api/auth/me:
  *   get:
- *     summary: Get current logged-in user's information (Protected Route)
+ *     summary: Get All  user's information (Protected Route)(Admin Only)
  *     tags: [Auth]
  *     security:
  *       - bearerAuth: []

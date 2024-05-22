@@ -41,7 +41,10 @@ app.use("/api/auth", authRoutes);
 app.use("/api/books", bookRoutes);
 
 app.get("/", (req, res) => {
-  res.send("HomePage");
+  res.send({Project:"Books_Management",
+    Project_type:"Node-Assignment",
+    Documentation_Route:"/api-docs"
+  });
 });
 
 app.listen(PORT, async () => {
