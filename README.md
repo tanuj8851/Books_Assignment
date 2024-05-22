@@ -80,6 +80,8 @@ BOOKS_ASSIGNMENT\
  |--middlewares\    # Custom express middlewares
  |--models\         # Auth/user and BooksMongoose models/Schemas
  |--routes\         # Auth/user and Books Routes
+ |--.env\           # environment variables
+ |--.gitignore      # ignoring node_modules and .env file 
  |--app.js        # App entry point
 ```
 
@@ -87,7 +89,7 @@ BOOKS_ASSIGNMENT\
 
 List of available routes:
 
-**Auth routes**:
+**Auth routes**:\
 `POST api/auth/register` - User Register\
 `POST api/auth/login` - User Login\
 `POST api/auth/me` - Protected Route (Admin Only)\
